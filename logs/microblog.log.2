@@ -1,0 +1,101 @@
+2020-06-23 13:14:15,719 ERROR : Exception on /search [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\microblog\app\main\routes.py", line 136, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\User\microblog\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\User\microblog\app\search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1479, in search
+    return self.transport.perform_request(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 345, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\connection\base.py", line 287, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-06-23 13:19:25,162 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-23 13:19:36,912 ERROR : Exception on /search [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\microblog\app\main\routes.py", line 136, in search
+    posts, total = Post.search(g.search_form.q.data, page, current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\User\microblog\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\User\microblog\app\search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1479, in search
+    return self.transport.perform_request(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 345, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\connection\base.py", line 287, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)
+2020-06-23 13:23:50,002 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-23 13:25:36,162 ERROR : Exception on /search [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\microblog\app\main\routes.py", line 136, in search
+    posts, total = Post.search(g.search_form.q.data, page,
+  File "C:\Users\User\microblog\app\models.py", line 15, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\User\microblog\app\search.py", line 22, in query_index
+    search = current_app.elasticsearch.search(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\client\utils.py", line 139, in _wrapped
+    return func(*args, params=params, headers=headers, **kwargs)
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\client\__init__.py", line 1479, in search
+    return self.transport.perform_request(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\transport.py", line 345, in perform_request
+    status, headers_response, data = connection.perform_request(
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 256, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\user\microblog\venv\lib\site-packages\elasticsearch\connection\base.py", line 287, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(
+elasticsearch.exceptions.NotFoundError: NotFoundError(404, 'index_not_found_exception', 'no such index [post]', post, index_or_alias)

@@ -1,0 +1,99 @@
+2020-06-19 17:15:23,462 ERROR : Exception on / [POST] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\microblog\app\main\routes.py", line 29, in index
+    post = Post(body=form.post.data, author=current_user,
+  File "<string>", line 4, in __init__
+  File "c:\users\user\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 433, in _initialize_instance
+    manager.dispatch.init_failure(self, args, kwargs)
+  File "c:\users\user\microblog\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 68, in __exit__
+    compat.raise_(
+  File "c:\users\user\microblog\venv\lib\site-packages\sqlalchemy\util\compat.py", line 178, in raise_
+    raise exception
+  File "c:\users\user\microblog\venv\lib\site-packages\sqlalchemy\orm\state.py", line 430, in _initialize_instance
+    return manager.original_init(*mixed[1:], **kwargs)
+  File "c:\users\user\microblog\venv\lib\site-packages\sqlalchemy\ext\declarative\base.py", line 839, in _declarative_constructor
+    raise TypeError(
+TypeError: 'language' is an invalid keyword argument for Post
+2020-06-19 17:18:50,330 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 11:24:40,339 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 11:25:06,746 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 11:25:44,936 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 11:35:37,940 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 11:36:48,937 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 11:36:58,516 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 11:37:10,077 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-22 13:44:48,538 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:75]
+2020-06-22 15:52:58,761 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:75]
+2020-06-22 16:01:15,980 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:75]
+2020-06-22 16:05:15,061 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:75]
+2020-06-22 16:09:43,973 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:75]
+2020-06-22 16:14:07,369 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:75]
+2020-06-22 16:25:55,991 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:26:30,076 ERROR : Exception on /search [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\User\microblog\app\main\routes.py", line 141, in search
+    return render_template('search.html', tittle=_('Search'), posts=posts, next_url=next_url, prev_url=prev_url)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "c:\users\user\microblog\venv\lib\site-packages\jinja2\environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "c:\users\user\microblog\venv\lib\site-packages\jinja2\environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "c:\users\user\microblog\venv\lib\site-packages\jinja2\environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "c:\users\user\microblog\venv\lib\site-packages\jinja2\loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "c:\users\user\microblog\venv\lib\site-packages\jinja2\environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "c:\users\user\microblog\venv\lib\site-packages\jinja2\environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "c:\users\user\microblog\venv\lib\site-packages\jinja2\_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\User\microblog\app\templates\search.html", line 22, in template
+    {% endblock %
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', got '%'
+2020-06-22 16:26:52,385 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:29:46,096 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:30:41,767 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:34:33,670 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:37:51,265 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:39:42,396 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:46:21,696 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:48:05,775 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:50:30,707 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:50:37,971 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:53:17,243 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-22 16:55:19,925 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-23 12:04:04,070 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-23 12:05:42,783 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-23 12:51:18,894 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-23 12:54:57,411 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
+2020-06-23 13:13:37,238 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:74]
