@@ -1,4 +1,4 @@
-2020-06-19 16:56:40,405 ERROR : Exception on /favicon.ico [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+2020-06-19 16:57:19,367 ERROR : Exception on /favicon.ico [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
@@ -47,8 +47,8 @@ Traceback (most recent call last):
     {% block body -%}
   File "c:\users\user\microblog\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 21, in block "body"
     {% block navbar %}
-  File "C:\Users\User\microblog\app\templates\base.html", line 22, in block "navbar"
-    <li><a href="{{url_for('explore')}}">{{_('Explore')}}</a> </li>
+  File "C:\Users\User\microblog\app\templates\base.html", line 26, in block "navbar"
+    <li><a href="{{url_for('login')}}">{{_('Login')}}</a> </li>
   File "c:\users\user\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
     return appctx.app.handle_url_build_error(error, endpoint, values)
   File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
@@ -59,9 +59,9 @@ Traceback (most recent call last):
     rv = url_adapter.build(
   File "c:\users\user\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'explore'. Did you mean 'main.explore' instead?
-2020-06-19 16:57:16,123 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
-2020-06-19 16:57:18,735 ERROR : Exception on / [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2020-06-19 17:00:11,667 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
+2020-06-19 17:00:14,403 ERROR : Exception on / [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -94,3 +94,37 @@ Traceback (most recent call last):
   File "c:\users\user\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
     raise BuildError(endpoint, values, method, self)
 werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2020-06-19 17:03:24,740 ERROR : Exception on /index [GET] [inc:\users\user\microblog\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 271, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\login_manager.py", line 174, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask_login\utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\user\microblog\venv\lib\site-packages\flask\helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "c:\users\user\microblog\venv\lib\site-packages\werkzeug\routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2020-06-19 17:04:01,042 INFO : Microblog startup [inC:\Users\User\microblog\app\__init__.py:71]
